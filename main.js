@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var product_1 = require("./product");
+var cart_1 = require("./cart");
+var product1 = new product_1.Product(1, 'Laptop', 999.99);
+var product2 = new product_1.Product(2, 'Mouse', 19.99);
+var product3 = new product_1.Product(3, 'Keyboard', 49.99);
+var myobj = new cart_1.Cart();
+myobj.additems(product1);
+myobj.additems(product2);
+myobj.additems(product3);
+console.log(myobj.getProducts());
+myobj.removeProduct(2);
+console.log(myobj.getProducts());
+console.log(myobj.getTotal());
+console.log(myobj.getProducts());
