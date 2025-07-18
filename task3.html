@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Image Slider</title>
+</head>
+<body>
+ 
+  <div id="slider">
+<img id="image" src="./vada.jpg" alt="Image Slider">
+</div>
+ 
+  <div class="btn-container">
+<button id="prevBtn" onclick="prevImage()">Previous</button>
+<button id="nextBtn" onclick="nextImage()">Next</button>
+</div>
+ 
+  <script>
+    let images = [
+      "./burger.jpg",
+      "./idly.jpg",
+      "./jelebi.jpg",
+      "./Samosa.jpg"
+    ];
+ 
+    let currentIndex = 0;
+ 
+    function showImage(index) {
+      let img = document.getElementById("image");
+      img.src = images[index];
+      updateButtons();
+    }
+ 
+    function prevImage() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        showImage(currentIndex);
+      }
+    }
+ 
+    function nextImage() {
+      if (currentIndex < images.length - 1) {
+        currentIndex++;
+        showImage(currentIndex);
+      }
+    }
+ 
+    function updateButtons() {
+      document.getElementById("prevBtn").disabled = currentIndex === 0;
+      document.getElementById("nextBtn").disabled = currentIndex === images.length - 1;
+    }
+ 
+    // Initial setup
+    showImage(currentIndex);
+ 
+  </script>
+ 
+</body>
+</html>

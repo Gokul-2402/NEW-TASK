@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Slider</title>
+</head>
+<body>
+ 
+<div id="slider">
+    <img id="image" src="./samosa.jpg" alt="Image Slider" height="200px" width="300px">
+</div>
+ 
+<div class="btn-container">
+    
+    <button id="prevBtn" onclick="changeImage(-1)" disabled>Previous</button>
+    <button id="nextBtn" onclick="changeImage(1)">Next</button>
+   
+</div>
+ 
+<script>
+    let images = [
+        "./burger.jpg",
+        "./idly.jpg",
+        "./jelebi.jpg",
+        "./samosa.jpg"
+    ];
+
+    
+ 
+    let currentIndex = 0;
+ 
+    function changeImage(direction) {
+        currentIndex += direction;
+        document.getElementById("image").src = images[currentIndex];
+        document.getElementById("prevBtn").disabled = currentIndex === 0;
+        document.getElementById("nextBtn").disabled = currentIndex === images.length - 1;
+    }
+
+   
+</script>
+ 
+</body>
+</html>

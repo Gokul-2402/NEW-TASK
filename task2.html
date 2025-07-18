@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+   <h1 id="s"></h1>
+
+  
+   <img id="d4" src="./samosa.jpg" alt="samosa" height="200px" width="300px"><br>
+    <strong id="s">Samosa</strong>
+    <br>
+    <button type="button" onclick="changeImg('burger.jpg','burger')">Burger</button>
+ 
+    <button type="button" onclick="changeImg('jelebi.jpg','Jilebi')">Jilebi</button>
+ 
+    <button type="button" onclick="changeImg('idly.jpg','Idly')">Idly</button>
+ 
+    <button type="button" onclick="changeImg('Samosa.jpg','Samosa')">Samosa</button>
+   
+   
+  
+
+
+   <script>
+
+function changeImg(Snack,name) {
+            document.getElementById("d4").src=Snack;
+            document.getElementById("s").innerHTML=name;
+        }
+    
+   
+
+
+
+    
+   </script>
+</body>
+</html>

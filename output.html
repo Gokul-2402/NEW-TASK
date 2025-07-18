@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1 id="D1"></h1>
+   <h1 id="D2">chennai</h1>
+   <h1 id="D3">INDIA</h1>
+   <button type="button" onclick="changedata()">Changevalue</button>
+   <button type="button" onclick="changecolor('red')">RED</button>
+   <button type="button" onclick="changecolor('blue')">BLUE</button>
+   <button type="button" onclick="changecolor('Green')">GREEN</button>
+   
+   
+   
+
+
+   <script>
+    function changedata(){
+        document.getElementById("D2").innerHTML="TamilNadu";
+    }
+
+    function changecolor(Color){
+        document.getElementById("D2").style.color = Color;
+}
+
+
+    document.getElementById("D1").innerHTML="CHANGEPOND";
+    document.getElementById("D2").style.color="pink";
+    let data =document.getElementById("D3").innerHTML;
+    console.log(data);
+   </script>
+</body>
+</html>

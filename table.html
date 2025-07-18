@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+    <style>
+        #t1 {
+            border: 20px;
+            width: 500px;
+            height: 500px;
+            border-color: black;
+ 
+        }
+ 
+        /* #td1{
+            background-color: red;
+        } */
+       
+    </style>
+</head>
+ 
+<body>
+    <div>
+        <table id="t1" border="1">
+            <tr id="tr1">
+                <td id="1"></td>
+                <td id="2"></td>
+                <td id="3"></td>
+            </tr>
+            <tr>
+                <td id="4"></td>
+                <td id="5"></td>
+                <td id="6"></td>
+            </tr>
+            <tr>
+                <td id="7"></td>
+                <td id="8"></td>
+                <td id="9"></td>
+            </tr>
+        </table>
+        <br>
+        <strong>Select Cell</strong>
+        <input type="number" id="txt1">
+        <br>
+        <br>
+        <strong>Select Color</strong>
+        <input type="color" id="txt2">
+        <br>
+        <br>
+        <button id="btn" type="button" onclick="changecolor()">Apply</button>
+    </div>
+ 
+ 
+    <script>
+        function changecolor(){
+            let cell = document.getElementById("txt1").value
+            let colour = document.getElementById("txt2").value;  
+            let cellval= document.getElementById(cell);
+            cellval.style.backgroundColor= colour;
+           
+           
+           
+        }
+ 
+ 
+    </script>
+</body>
+ 
+</html>
+ 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h3><b>TEMPERATURE CONVERTER</b></h3>
+
+        <label ><b>Enter The Temperature in Celcius</b> </label><br>
+        <input type="text"  id="txt1">
+         <br> <br>
+        <button type="button" onclick ="temperature()"><b>CONVERT</b></button><br><br>
+        <strong> Result : <span id = "res"></span></strong>
+    </form>
+
+    <script>
+        function temperature(){
+        let Celcius = document.getElementById("txt1").value;
+        
+        document.getElementById("res").innerHTML = (Celcius * 9 / 5) + 32
+        };
+    </script>
+</body>
+</html>

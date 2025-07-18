@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2 Id='d1' class ='clock'></h2>
+<h2 Id='d2'></h2>
+<h2 Id='d3'></h2>
+
+    <script>
+        function myclock()  {
+            let dateobj= new Date();
+            document.getElementById('d1').innerHTML = dateobj.toLocaleTimeString();
+        };
+  
+myclock();
+
+setinterval(myclock, 1000);
+
+
+    </script>
+</body>
+</html>
